@@ -1,0 +1,11 @@
+dist/
+build/
+assembly/
+other/
+objects/
+
+.env
+*.o
+*.s
+*.orig
+*.out
