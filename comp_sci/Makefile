@@ -108,6 +108,8 @@ run:	## Runs released version of the binary
 tests:	## Runs several tests in the main entrypoint
 	$(debug_target)
 
+t: clean debug tests	## Shortcut to clean-debug-tests
+
 checkMemoryLeaks:	## Checks memory leaks via Valgrind
 	@valgrind $(debug_target)
 
@@ -122,6 +124,9 @@ dump:	## Dump binary details to stdout
 
 hex:	## Show hex values of the debug-binary
 	@hexdump $(debug_target) | $(pager)
+
+elf:	## Show executable linkable file details
+	@readelf -a $(debug_target)
 
 mem:	## Show colorful memory layout of the binary
 	@nm $(debug_target) | $(pager)

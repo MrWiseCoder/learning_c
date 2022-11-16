@@ -3,6 +3,8 @@
 #include <stdbool.h>
 #include <time.h>
 
+#define PI 3.14
+#define STR "hayt"
 
 int main(int argc, char *argv[])
 {
